@@ -8,7 +8,7 @@ cy.viewport('macbook-15');
 cy.get("#CookieAccept").click();
 
 // Sayfanın ortasında bulunan "Alanında Uzman Online Psikologlar" alanından 3. psikolog için randevu al butonua tıkla.
-cy.xpath("(//button[@class='bs4-btn bs4-btn-sm bs4-btn-blue bs4-btn-block'])[3]").click();
+cy.xpath("(//button[@class='bs4-btn bs4-btn-sm bs4-btn-blue bs4-btn-block'])[1]").click();
 
 // " Görüntülü 45 dk." seçeneğini seç
 cy.xpath("(//h5[@class='list-group-item-heading'])[1]").click();
@@ -21,8 +21,8 @@ cy.xpath("(//button[@class='btn btn-next'])[1]").click();
 // Görüşme Tarihini "01.08.2023" Görüşme saatini "21:00-22:00" olarak seç
 //cy.get("input[placeholder='Görüşme Tarihi Seçiniz']").click();
 cy.get('#ScheduleDate').click();
-cy.get("tr:nth-child(6)>td:nth-child(2)").click();
-cy.get('#ScheduleTime').select('21:00-22:00');
+cy.get('tbody > :nth-child(1) > .today').click();
+cy.get('#ScheduleTime').select(1);
 
 // "Devam Et" butonuna tıkla
 cy.xpath("(//button[@class='btn btn-next'])[2]").click();
@@ -68,6 +68,8 @@ cy.get("div[class='jconfirm-content']").invoke('text').then((text) => {
   expect(text).to.equal(expectedText);
 });
 })
+
+
 
 
 
