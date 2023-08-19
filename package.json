@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.4",
+    "chai": "^4.3.7",
     "cypress": "^12.17.1",
     "cypress-iframe": "^1.0.1",
     "cypress-xpath": "^2.0.1",
