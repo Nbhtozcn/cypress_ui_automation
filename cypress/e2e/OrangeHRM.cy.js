@@ -34,7 +34,6 @@ describe("OrangeHRM Functionality",()=>{
       const newName="Jackie";
       cy.get("ul.oxd-main-menu>li:nth-child(6)").click();
       cy.get("input[class='oxd-input oxd-input--active orangehrm-firstname']").clear().type(newName);
-      //cy.get("input[class='oxd-input oxd-input--active orangehrm-firstname']").type(newName);
       cy.get('.orangehrm-card-container > .oxd-form > .oxd-form-actions > .oxd-button').click();
       cy.get("input[class='oxd-input oxd-input--active orangehrm-firstname']").invoke('val').should((actualName) => {
         expect(actualName).to.equal(newName);
